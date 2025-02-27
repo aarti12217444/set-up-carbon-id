@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7DAC4"
+    tools:context=".Carbon_Calculator">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Carbon Emission"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Appliance"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"/>
+        <Spinner
+            android:id="@+id/select"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spi" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Duration in hour"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter duration"
+            android:background="@drawable/bg2"
+            android:textColor="@color/black"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Watt Appliance"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/watt"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter duration"
+            android:background="@drawable/bg2"
+            android:textColor="@color/black"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/cal"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/green"
+            android:text="Calculate"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#F89605"
+            android:textSize="22dp"/>
+    </LinearLayout>
+
+</FrameLayout>

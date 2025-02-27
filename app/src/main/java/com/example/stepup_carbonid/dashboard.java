@@ -38,7 +38,7 @@ BottomNavigationView nav;
                     replacefragment(new home_fragment());
                 }
                 else if(itemid==R.id.stepcounter){
-
+                    replacefragment(new Carbon_Calculator());
                 }
                 return false;
             }

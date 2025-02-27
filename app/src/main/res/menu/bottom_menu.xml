@@ -7,7 +7,7 @@
     android:icon="@drawable/ic_outline_home_24"/>
     <item
         android:id="@+id/stepcounter"
-        android:title="StepCount"
+        android:title="Calculate"
         android:icon="@drawable/baseline_access_time_filled_24"/>
     <item
         android:id="@+id/notification"

@@ -10,12 +10,13 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Step Counter"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -23,26 +24,26 @@
         />
 
     <TextView
-        android:id="@+id/stepcounter"
+        android:id="@+id/footprintsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginTop="50dp"
-        android:textSize="18dp"
+        android:text="your previous footprint save : 0"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="50dp">
+        android:layout_centerVertical="true">
         <ProgressBar
             android:id="@+id/progressbar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:max="1000"
+            android:max="2000"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@drawable/circular_shape"
@@ -68,6 +69,16 @@
             />
 
     </RelativeLayout>
+    <Button
+        android:id="@+id/savesteps"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:text="Save your steps"
+        android:textSize="18dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/green"
+        />
 
 </LinearLayout>
 
