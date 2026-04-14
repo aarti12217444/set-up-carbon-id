@@ -33,8 +33,7 @@ public class ChatFragment extends Fragment {
 
     OkHttpClient client = new OkHttpClient();
 
-    // 🔐 Put your NEW Gemini API key here
-    String API_KEY = "PASTE_YOUR_NEW_API_KEY_HERE";
+    private static final String API_KEY = BuildConfig.GEMINI_API_KEY;
 
     public ChatFragment() {
         // Required empty constructor
@@ -71,6 +70,11 @@ public class ChatFragment extends Fragment {
             adapter.notifyDataSetChanged();
             messageBox.setText("");
 
+            if (API_KEY == null || API_KEY.trim().isEmpty()) {
+                Toast.makeText(getContext(), "Gemini API key is not configured", Toast.LENGTH_LONG).show();
+                return;
+            }
+
             sendToGemini(msg);
         });
 
@@ -102,7 +106,7 @@ public class ChatFragment extends Fragment {
             );
 
             Request request = new Request.Builder()
-                    .url("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY)
+                    .url("https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" + API_KEY)
                     .post(body)
                     .build();
 

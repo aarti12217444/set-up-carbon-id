@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StepUp Carbon ID - Legal</title>
+  <style>
+    :root {
+      --bg: #f5f7f4;
+      --card: #ffffff;
+      --text: #1f2a1f;
+      --muted: #5b6a5b;
+      --accent: #2e7d32;
+      --line: #d8e2d7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Noto Sans", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% -10%, #d9f0db 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% -30%, #e7f6e7 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #205e24, #3f8f44);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    .subtitle { margin: 0; opacity: 0.95; }
+
+    .grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: #b8c9b8;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      margin: 0 0 6px;
+      color: var(--accent);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .note {
+      margin-top: 18px;
+      background: #ffffffcc;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>StepUp Carbon ID</h1>
+      <p class="subtitle">Official legal and support pages for Google Play listing.</p>
+    </section>
+
+    <section class="grid" aria-label="Legal pages">
+      <a class="card" href="privacy-policy.html">
+        <h2>Privacy Policy</h2>
+        <p>How user data is collected, used, and protected.</p>
+      </a>
+
+      <a class="card" href="terms-and-conditions.html">
+        <h2>Terms and Conditions</h2>
+        <p>Rules and legal terms for app usage.</p>
+      </a>
+
+      <a class="card" href="delete-account.html">
+        <h2>Delete Account</h2>
+        <p>Instructions for account and data deletion requests.</p>
+      </a>
+
+      <a class="card" href="support.html">
+        <h2>Support</h2>
+        <p>Contact page for app issues and help requests.</p>
+      </a>
+    </section>
+
+    <p class="note">
+      Replace placeholder contact details in all pages before publishing.
+    </p>
+  </main>
+</body>
+</html>

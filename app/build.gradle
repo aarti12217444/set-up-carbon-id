@@ -1,11 +1,45 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
 }
 
+def localProps = new Properties()
+def localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { stream ->
+        localProps.load(stream)
+    }
+}
+
+def geminiApiKey = localProps.getProperty("GEMINI_API_KEY") ?: System.getenv("GEMINI_API_KEY") ?: ""
+def escapedGeminiApiKey = geminiApiKey.replace("\\", "\\\\").replace("\"", "\\\"")
+
+def releaseStoreFile = localProps.getProperty("RELEASE_STORE_FILE") ?: System.getenv("RELEASE_STORE_FILE") ?: ""
+def releaseStorePassword = localProps.getProperty("RELEASE_STORE_PASSWORD") ?: System.getenv("RELEASE_STORE_PASSWORD") ?: ""
+def releaseKeyAlias = localProps.getProperty("RELEASE_KEY_ALIAS") ?: System.getenv("RELEASE_KEY_ALIAS") ?: ""
+def releaseKeyPassword = localProps.getProperty("RELEASE_KEY_PASSWORD") ?: System.getenv("RELEASE_KEY_PASSWORD") ?: ""
+def hasReleaseSigning = !releaseStoreFile.isEmpty() && !releaseStorePassword.isEmpty() && !releaseKeyAlias.isEmpty() && !releaseKeyPassword.isEmpty()
+
 android {
+        signingConfigs {
+            if (hasReleaseSigning) {
+                release {
+                    storeFile rootProject.file(releaseStoreFile)
+                    storePassword releaseStorePassword
+                    keyAlias releaseKeyAlias
+                    keyPassword releaseKeyPassword
+                }
+            }
+        }
+
     namespace 'com.example.stepup_carbonid'
     compileSdk 35
+
+    buildFeatures {
+        buildConfig true
+    }
 
     defaultConfig {
         applicationId "com.example.stepup_carbonid"
@@ -14,6 +48,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField "String", "GEMINI_API_KEY", "\"${escapedGeminiApiKey}\""
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,6 +57,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
     compileOptions {
