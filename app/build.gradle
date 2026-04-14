@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.stepup_carbonid'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.stepup_carbonid"
         minSdk 24
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -39,6 +39,8 @@ dependencies {
     implementation libs.firebase.auth
     implementation libs.firebase.bom
     implementation libs.play.services.auth
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 
 
     testImplementation libs.junit

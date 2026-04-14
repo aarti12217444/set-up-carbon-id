@@ -7,10 +7,19 @@
     android:icon="@drawable/ic_outline_home_24"/>
     <item
         android:id="@+id/stepcounter"
-        android:title="Calculate"
+        android:title="Electricity"
         android:icon="@drawable/baseline_access_time_filled_24"/>
     <item
-        android:id="@+id/notification"
-        android:title="Notification"
-        android:icon="@drawable/ic_baseline_notifications_24"/>
+        android:id="@+id/vehicle"
+        android:title="Vehicle"
+        android:icon="@drawable/baseline_access_time_filled_24"/>
+    <item
+        android:id="@+id/food"
+        android:title="Food"
+        android:icon="@drawable/baseline_fastfood_24"/>
+
+    <item
+        android:id="@+id/chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat"/>
 </menu>

@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculate Carbon Emission"
+            android:text="Calculate Vehicle Carbon Emission"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="22sp"
@@ -23,13 +23,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Appliance"
+            android:text="Select Transport Type"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:textSize="18sp"/>
 
         <Spinner
-            android:id="@+id/select"
+            android:id="@+id/transport"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -38,36 +38,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Duration (hours)"
+            android:text="Select Fuel Type"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:textSize="18sp"/>
 
-        <EditText
-            android:id="@+id/duration"
+        <Spinner
+            android:id="@+id/fuel"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Enter duration"
-            android:background="@drawable/bg2"
-            android:textColor="@color/black"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:inputType="numberDecimal"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spi"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Watt Appliance"
+            android:text="Enter Distance (KM)"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/watt"
+            android:id="@+id/dist"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Enter watt"
+            android:hint="Enter distance"
             android:background="@drawable/bg2"
             android:textColor="@color/black"
             android:padding="10dp"

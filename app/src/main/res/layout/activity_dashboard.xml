@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,37 +9,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dashboard">
+
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#27914F"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="StepUP-CarbonID"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="20dp"
             android:textColor="#ECE3E3"
-            android:textSize="22dp"
-            android:textStyle="bold" />
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
         <ImageView
             android:layout_width="60dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="100dp"
-            android:src="@drawable/applogo2" />
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/applogo2"/>
     </LinearLayout>
+
+    <!-- Fragment container -->
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemTextColor="@color/white"
         android:background="#27914F"
+        app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
         app:menu="@menu/bottom_menu"/>
+
 </LinearLayout>
